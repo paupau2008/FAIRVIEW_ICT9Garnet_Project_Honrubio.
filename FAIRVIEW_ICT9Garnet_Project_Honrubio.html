@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit Converter</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="margin: 180px; background-color: darkgray;">
+<div class="container-fluid bg-dark col-md-8" align="center" style= "border-radius: 50px; border-spacing: 3px; border-width: 10%; border-style: solid;"><h1 style="color: orange"><i>Millimeter Converter 3000</i></h1>
+		<input type="text" id="millimeter" placeholder="Input Millimeter amount"><br>
+		<hr>
+		<input type="submit" value="Convert to Centimeters" onclick="divide1()"><br>
+		<hr>
+		<input type="submit" value="Convert to Meters" onclick="divide2()"><br>
+		<hr>
+		<input type="submit" value="Convert to Kilometers" onclick="divide3()"><br>
+		<hr>
+		<div class="container-fluid bg-dark col-md-8 text-danger">
+		<p id="id1"></p><p id="id2"></p><p id="id3"></p><hr><p>_____________</p>
+	</div>
+		<script type="text/javascript">
+			function divide1() {
+				var input = document.getElementById('millimeter').value;
+				var result = input / 10
+				document.getElementById('id1').innerHTML = "Centimeters = " + result;
+			}
+			function divide2() {
+			    var input = document.getElementById('millimeter').value;
+				var result2 = input / 1000
+				document.getElementById('id2').innerHTML = "Meters = " + result2
+			}
+			function divide3() {
+			    var input = document.getElementById('millimeter').value;
+				var result3 = input / 1000000
+				document.getElementById('id3').innerHTML = "Kilometers = " + result3
+			}
+		</script>
+ </div>
+</body>
+</html>
